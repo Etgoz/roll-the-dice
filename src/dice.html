@@ -3,25 +3,41 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Roll the Dice</title>
+		<link rel="stylesheet" href="dice.css" />
 	</head>
 	<body>
 		<header>
-			<h1>Roll The Dice</h1>
-			\
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-				veritatis distinctio ullam eos necessitatibus veniam exercitationem,
-				dicta quia doloremque ducimus.
-			</p>
+			<img src="https://cdn-icons-png.flaticon.com/512/1669/1669397.png" />
+			<section>
+				<h1>Roll The Dice</h1>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+					veritatis distinctio ullam eos necessitatibus veniam exercitationem,
+					dicta quia doloremque ducimus.
+				</p>
+			</section>
 			<button type="button">Settings</button>
 			<button type="button">Rules</button>
 			<button type="button" disabled>Reset game</button>
 		</header>
-        <main>
-        <footer>
-            <h3>footer</h3>
-            <p>Etay Gozlan Dice Game</p>
-        </footer>
+		<main id="welcome">
+			<img src="https://cdn-icons-png.flaticon.com/512/1669/1669397.png" />
+			<button id="start-button" type="button">Start New Game</button>
+		</main>
+		<main id="players">
+			<form></form>
+			<div>
+				<button>Lets play!</button>
+				<button type="reset">clear all</button>
+			</div>
+		</main>
+		<main id="game">game</main>
+		<main id="scores">scores</main>
+		<footer>
+			<h3>footer</h3>
+			<p>Etay Gozlan Dice Game</p>
+		</footer>
+		<script src="dice.js"></script>
 	</body>
 </html>
