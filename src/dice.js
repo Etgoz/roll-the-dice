@@ -8,7 +8,7 @@ const modes = ["number of wins", "total collected points"];
 let state = {
 	page: "welcome",
 	playersNumber: 2,
-	players: [],
+	players: [{}, {}],
 	rounds: 3,
 	currentPlayer: 0,
 	mode: "number of wins",
@@ -25,6 +25,9 @@ function makePlayers(s) {
 		const pLabel = document.createElement("label");
 		const pInput = document.createElement("input");
 		pInput.setAttribute("type", "text");
+		pInput.addEventListener("keyup", () => {
+			setPlayerName(s, i, pInput.value);
+		});
 		pLabel.textContent = `Player ${i + 1} Name:`;
 		document
 			.querySelector("#players>form")
@@ -54,3 +57,8 @@ start.addEventListener("click", () => {
 	state = startNewGame(state);
 	render(state);
 });
+
+function setPlayerName(s, player, name) {
+	s.players[player].name = name;
+	console.log(s.players);
+}
